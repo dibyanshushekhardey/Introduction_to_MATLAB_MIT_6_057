@@ -1,0 +1,19 @@
+% size of the matrix
+x = size(namesAndGrades, 2);
+grades = namesAndGrades(:, 2:x);
+
+% mean result
+meanGrades = nanmean(grades);
+meanMatrix = ones(15, 1) * meanGrades;
+disp(meanMatrix)
+
+curvedGrades = 3.5*(grades ./ meanMatrix);
+disp(nanmean(curvedGrades));
+
+y = curvedGrades > 5;
+curvedGrades(y) = 5;
+
+totalGrade = nanmean(curvedGrades);
+totalGrade = ceil(totalGrade);
+% disp(totalGrade)
+letters = 'FDCBA';
