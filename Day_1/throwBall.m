@@ -13,7 +13,7 @@ y = h + v*sin((theta * pi/180)*t) - 0.5*g*t.^2;
 ind = find(y < 0);
 X = x(ind(1));
 disp(X);
-
+disp("The ball hits the ground at a distance of " + X + " Meters");
 % plot
 figure;
 plot(x, y);
