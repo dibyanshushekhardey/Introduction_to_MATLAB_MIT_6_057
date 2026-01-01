@@ -1,0 +1,17 @@
+p = 0.99;
+k = 0:1000;
+
+geomSeries = p.^k;
+G = sum(geomSeries);
+disp(G);
+G1 = 1/(1-p);
+disp(G1);
+
+% plotting
+figure;
+yline(G1, 'Red');
+xlim([0 1001]);
+ylim([0, 101]);
+
+% plotting
+y1 = cums
