@@ -1,0 +1,14 @@
+time = 0:0.001:4*pi;
+x = sin(time);
+y = cos(time);
+z = time;
+plot3(x, y, z, 'k', 'LineWidth', 2);
+zlabel('Time');
+xlim([-1 1]);
+ylim([-1 1]);
+zlim([-10 10]);
+% axis square;
+% axis tight;
+% axis equal;
+% axis xy;
+axis ij;

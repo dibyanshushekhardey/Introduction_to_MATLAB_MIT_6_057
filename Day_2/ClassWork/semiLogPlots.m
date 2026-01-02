@@ -1,0 +1,14 @@
+x = -pi:pi/100:pi;
+y = cos(4*x).*sin(10*x).*exp(-abs(x));
+figure;
+plot(x, y, 'k-');
+figure;
+semilogx(x, y, 'k');
+subplot(4, 3, 1);
+semilogy(y, 'r.-');
+subplot(4, 3, 2);
+loglog(x, y);
+subplot(4, 3, 3);
+x1 = 0:100;
+semilogy(x1, exp(x1), 'k.-');
+subplot(4, 3, 4);
